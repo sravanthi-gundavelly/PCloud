@@ -1,0 +1,618 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>::Welcome to Pactera Edge Cloud Platform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css">
+</head>
+<body>
+    <!--header starts-->
+    <div class="header-top-strip"></div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-5 col-sm-4 logo"><a href="../Home/Index"><img src="~/images/pactra-logo.png" class="img-fluid" alt="Responsive image"></a> </div>
+
+            <div class="col-lg-9 col-5 col-sm-7">
+                <a href="https://contactlogicapp.azurewebsites.net/ " target="_blank" class="need-txt float-right">Need Help<span class="fa-fw select-all fas"></span></a>
+                <button id="signin" class="login-button float-right" data-toggle="modal" data-target="#modalLoginForm">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN
+                </button>
+
+
+                <a href="../Home/Index" onclick="clear()">
+                    <button style="display:none;" class="login-button float-right" id="signout" onclick="signout()">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT
+                    </button>
+                </a>
+                <div id="result">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mobile-toggle" id="a">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <div class="menu-level-0">
+                                <div class="menus">
+                                    <a class="nav-item nav-link" href="@Url.Action("Home", "Home")">Migration & Multicloud</a>
+
+                                    <div class="submenu-wrapper">
+                                        <div class="submenu-wrapper--first">  <h2>Migration & Multicloud</h2> </div>
+
+                                        <div class="submenu-wrapper--second">
+                                            <div class="menu_link_content menu-link-contentpactera-main-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                                <div class="menu-wrapper">
+
+                                                    <ul class="menu menu-level-1">
+                                                        <li class="menu-item"><a href="#collapseOne" data-toggle="collapse">On-Premise data assets to cloud migration</a> </li>
+                                                        <li class="menu-item"><a href="#collapseTwo" data-toggle="collapse">Cloud to Cloud Migration </a> </li>
+                                                        <li class="menu-item"><a href="#collapseThree" data-toggle="collapse">Multicloud</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFive" data-toggle="collapse">Container & Serverless computing Environment</a> </li>
+                                                        <li class="menu-item"><a href="#collapseSix" data-toggle="collapse">Monolithic applications to microservices migration</a> </li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-view-all"><a href="/Home/Home">View all</a> </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="menu-level-0">
+                                <div class="menus">
+                                    <a class="nav-item nav-link" href="../Document/ManageServices">Managed Services</a>
+
+                                    @*<a class="nav-item nav-link" href="@Url.Action("Document", "ManageServices")">Managed Services</a>*@
+
+                                    <div class="submenu-wrapper">
+                                        <div class="submenu-wrapper--first">  <h2>Managed Services</h2> </div>
+
+                                        <div class="submenu-wrapper--second">
+                                            <div class="menu_link_content menu-link-contentpactera-main-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                                <div class="menu-wrapper">
+
+                                                    <ul class="menu menu-level-1">
+                                                        <li class="menu-item"><a href="#collapseOne" data-toggle="collapse">Inident Reporting & Management over cloud</a> </li>
+                                                        <li class="menu-item"><a href="#collapseTwo" data-toggle="collapse">Cloud Governance</a> </li>
+                                                        <li class="menu-item"><a href="#collapseThree" data-toggle="collapse">Security & Threat hunting</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFour" data-toggle="collapse">Cloud Resource Optimisation</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFive" data-toggle="collapse">Cloud Usage Analytics & Billing Forecasting</a> </li>
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-view-all"><a href="../Document/ManageServices">View all</a> </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="menu-level-0">
+                                <div class="menus">
+                                    <a class="nav-item nav-link" href="../Document/Innovation">Cloud as an Innovation Platform</a>
+
+                                    <div class="submenu-wrapper">
+                                        <div class="submenu-wrapper--first">  <h2>Cloud as an Innovation Platform</h2> </div>
+
+                                        <div class="submenu-wrapper--second">
+                                            <div class="menu_link_content menu-link-contentpactera-main-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                                <div class="menu-wrapper">
+
+                                                    <ul class="menu menu-level-1">
+                                                        <li class="menu-item"><a href="#collapseOne" data-toggle="collapse">ML,AI & Deep learning Over Cloud</a> </li>
+                                                        <li class="menu-item"><a href="#collapseTwo" data-toggle="collapse">RPA Over Cloud</a> </li>
+                                                        <li class="menu-item"><a href="#collapseThree" data-toggle="collapse">IOT ,IIOT & Edge solutions</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFour" data-toggle="collapse">Datapipelines Management Over Cloud</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFive" data-toggle="collapse">Bass Over Cloud</a> </li>
+
+
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-view-all"><a href="../Document/Innovation">View all</a> </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="menu-level-0">
+                                <div class="menus">
+                                    <a class="nav-item nav-link" href="../Document/Solutions">solutions over cloud</a>
+
+                                    <div class="submenu-wrapper">
+                                        <div class="submenu-wrapper--first">  <h2>Solutions over cloud</h2> </div>
+
+                                        <div class="submenu-wrapper--second">
+                                            <div class="menu_link_content menu-link-contentpactera-main-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                                <div class="menu-wrapper">
+
+                                                    <ul class="menu menu-level-1">
+                                                        <li class="menu-item"><a href="#collapseOne" data-toggle="collapse">Smart Retail Analytics</a> </li>
+                                                        <li class="menu-item"><a href="#collapseTwo" data-toggle="collapse">E-Commerce Solutions</a> </li>
+                                                        <li class="menu-item"><a href="#collapseThree" data-toggle="collapse">Document Management</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFour" data-toggle="collapse">Financial Services</a> </li>
+                                                        <li class="menu-item"><a href="#collapseFive" data-toggle="collapse">Social Media Management Solutions</a> </li>
+                                                        <li class="menu-item"><a href="#collapseSix" data-toggle="collapse">Industry 4.0-Edge Computing Solutions</a> </li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-view-all"><a href="../Document/Solutions">View all</a> </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-lg-12 mobile-toggle" id="b">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <div class="menu-level-0"><a class="nav-item nav-link" href="migration-multi-cloud.html">Manage updates</a></div>
+                            <div class="menu-level-0">	  <a class="nav-item nav-link" href="managed-services.html">managed services</a></div>
+                            <div class="menus">
+                                <a class="nav-item nav-link" href="#">Manage documents</a>
+
+                                <div class="submenu-wrapper" style="padding:0px;">
+
+
+                                    <div class="submenu-wrapper--second" style="padding-left:0px;">
+                                        <div class="menu_link_content menu-link-contentpactera-main-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                            <ul class="menu menu-level-1">
+                                                <li class="menu-item"><a href="#collapseOne" data-toggle="collapse">Upload Documents</a> </li>
+                                                <li class="menu-item"><a href="#collapseTwo" data-toggle="collapse">Manage Documents </a> </li>
+                                            </ul>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="menu-level-0"> <a class="nav-item nav-link" href="solutions.html">Role Settings</a></div>
+                            <div class="menu-level-0"> <a class="nav-item nav-link" href="solutions.html">User Settings</a></div>
+
+
+
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--header ends-->
+
+    <div class="container-fluid banner" style="padding: 0px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/images/slider-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/slider-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/slider-3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/slider-4.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <footer class="main-page-footer footer-mt-50" role="contentinfo">
+
+        <div id="main-footer-container">
+            <div id="pactera-info-container">
+                <div class="main-footer-content">
+                    <nav role="navigation" aria-labelledby="block-footermainmenu-menu" id="block-footermainmenu">
+
+                        <h2 class="visually-hidden" id="block-footermainmenu-menu">Footer Main Menu</h2>
+
+
+                        <a href="/" class="d-flex justify-content-center"><img id="main-header-logo" style="height: 40px;" src="~/images/pactera-edge-logo.png"></a>
+                        <ul id="footer-menu">
+                            <li>
+                                <img style="height: auto;" src="~/images/pactera-arrow-icon.png">&nbsp; <a href="https://www.pactera-edge.com/about-us" data-drupal-link-system-path="node/171" target="_blank">About Us</a>
+                            </li>
+                            <li>
+                                <img style="height: auto;" src="~/images/pactera-arrow-icon.png">&nbsp; <a href="https://www.pactera-edge.com/careers" data-drupal-link-system-path="node/236" target="_blank">Careers</a>
+                            </li>
+                            <li>
+                                <img style="height: auto;" src="~/images/pactera-arrow-icon.png">&nbsp; <a href="https://www.pactera-edge.com/insights/case-studies" data-drupal-link-system-path="insights/case-studies" target="_blank">Case Studies</a>
+                            </li>
+                            <li>
+                                <img style="height: auto;" src="~/images/pactera-arrow-icon.png">&nbsp; <a href="https://www.pactera-edge.com/insights" data-drupal-link-system-path="insights" target="_blank">Insights</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="views-element-container" id="block-views-block-office-locations">
+                        <div>
+                            <div class="js-view-dom-id-446de22d68c7504c066f3f99c9c084d95ee5033e1498aae36ddd7c2ca51e5118">
+
+
+                                <div class="views-row">
+                                    <article class="office-location-container" data-history-node-id="11" role="article" about="/node/11">
+                                        <h2>
+                                            <span class="title">Seattle</span>
+                                            <span class="info-toggle open">Open/close</span>
+                                        </h2>
+                                        <div class="office-location-info">
+
+                                            <div class="office-info address">
+                                                <span id="pactera-location-icon">
+                                                    <img src="~/images/location-icon.png">
+                                                </span>
+                                                <div class="field_address">14980 NE 31st Way Suite 100 Redmond, WA 98052</div>
+                                            </div>
+
+                                            <div class="office-info phone">
+                                                <span id="pactera-phone-icon">
+                                                    <img src="~/images/phone-icon.png">
+                                                </span>
+                                                <div class="field_contact_phone">1.425.233.8578</div>
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="views-row">
+                                    <article class="office-location-container" data-history-node-id="6" role="article" about="/node/6">
+                                        <h2>
+                                            <span class="title">Chicago</span>
+                                            <span class="info-toggle open">Open/close</span>
+                                        </h2>
+                                        <div class="office-location-info">
+
+                                            <div class="office-info address">
+                                                <span id="pactera-location-icon">
+                                                    <img src="~/images/location-icon.png">
+                                                </span>
+                                                <div class="field_address">500 W Madison St #1610, Chicago, IL 60661</div>
+                                            </div>
+
+                                            <div class="office-info phone">
+                                                <span id="pactera-phone-icon">
+                                                    <img src="~/images/phone-icon.png">
+                                                </span>
+                                                <div class="field_contact_phone">1.312.754.9220</div>
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="views-row">
+                                    <article class="office-location-container" data-history-node-id="1" role="article" about="/node/1">
+
+                                        <h2>
+                                            <span class="title">New York</span>
+                                            <span class="info-toggle open">Open/close</span>
+                                        </h2>
+                                        <div class="office-location-info">
+
+                                            <div class="office-info address">
+                                                <span id="pactera-location-icon">
+                                                    <img src="~/images/location-icon.png">
+                                                </span>
+                                                <div class="field_address">102 Madison Ave 2nd Floor New York, NY 10016</div>
+                                            </div>
+
+                                            <div class="office-info phone">
+                                                <span id="pactera-phone-icon">
+                                                    <img src="~/images/phone-icon.png">
+                                                </span>
+                                                <div class="field_contact_phone">1.646.290.6124</div>
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a id="contact-us" href="https://contactlogicapp.azurewebsites.net/ " target="_blank">
+                            Contact us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="10">
+                                <path fill="#FFF" fill-rule="evenodd" d="M21.002 4.998l-7.011 5V6H0V4h13.991V-.003l7.011 5.001z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav role="navigation" aria-labelledby="block-socialmenu-menu" id="block-socialmenu">
+
+                        <div class="company-info">
+                            <div id="info-container">
+
+                                <h2 id="block-socialmenu-menu">Stay Connected</h2>
+
+
+
+                                <ul class="menu menu-level-0">
+
+                                    <li class="menu-item">
+                                        <a href="https://www.facebook.com/Pactera">Facebook</a>
+
+
+
+                                        <div class="menu_link_content menu-link-contentsocial-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                            <a href="https://www.facebook.com/Pactera" target="_blank">
+                                                <div class="field_icon">
+                                                    <img src="~/images/fb-icon.png" width="12" height="26" alt="" typeof="foaf:Image">
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a href="https://www.linkedin.com/company/pactera">Linkedin</a>
+
+
+
+                                        <div class="menu_link_content menu-link-contentsocial-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                            <a href="https://www.linkedin.com/company/pactera" target="_blank">
+                                                <div class="field_icon">
+                                                    <img src="~/images/lk-icon.png" width="22" height="22" alt="" typeof="foaf:Image">
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a href="https://twitter.com/pactera">Twitter</a>
+
+
+
+                                        <div class="menu_link_content menu-link-contentsocial-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                                            <a href="https://twitter.com/pactera" target="_blank">
+                                                <div class="field_icon">
+                                                    <img src="~/images/tt-icon.png" width="26" height="21" alt="" typeof="foaf:Image">
+
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="text-info">
+                            <a href="https://www.pactera-edge.com/locations" target="_blank">See our global locations</a>
+                        </div>
+                    </nav>
+                    <nav role="navigation" aria-labelledby="block-socialmenu-menu" id="block-socialmenu">
+
+                    </nav>
+                </div>
+                <div id="footnotes">
+                    <span id="footer-copyright">
+                        <span>© 2019 Pactera Edge. All rights reserved.</span>
+                    </span>
+                    <a href="https://www.pactera-edge.com/terms-use" id="footer-cookie" target="_blank">
+                        <span>Terms of Use</span>
+                    </a>
+                    <a href="https://www.pactera-edge.com/privacy-and-cookie-policy" id="footer-privacy" target="_blank">
+                        <span>Privacy and Cookie Policy</span>
+                    </a>
+                    <a href="https://www.pactera-edge.com/legal-notice" id="footer-conditions" target="_blank">
+                        <span>Legal Notice</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog " role="document">
+
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold" style="margin-top: 20px;">
+                            <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 60px;
+	color: #1D457E;"></i><br />LOGIN
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body  ">
+                        <div class="field">
+                            <input type="text" name="UserName" id="fullname" placeholder="John">
+                            <label for="fullname"><i class="fa fa-user-circle" aria-hidden="true" style="padding-right: 6px;"></i>user name</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="password" name="password" id="password" placeholder="******">
+                            <label for="password"><i class="fa fa-lock" aria-hidden="true" style="padding-right: 6px;"></i>password</label>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer ">
+                        <div class="col no-padding"><a href="#" class="need-txt " style="margin: 0px;">Need Help<span class="fa-fw select-all fas"></span></a></div>
+                        <div class="col no-padding"><button class="login-button float-right" style="margin-top: 0px;"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;LOGIN</button></div>
+                    </div>
+
+                    <div class="login-box-bottom-box"></div>
+                </div>
+            }
+        </div>
+    </div>
+
+    @*<p id="anchor1"><strong>Anchor 1</strong> - Lorem ipsum dolor sit amet, nonumes voluptatum mel ea.</p>*@
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var hash = window.location.hash;
+        var anchor = $('a[href$="' + hash + '"]');
+        if (anchor.length > 0) {
+            anchor.click();
+
+        }
+
+        /**/
+       // localStorage.setItem("User", '@ViewBag.User');
+        var user = localStorage.getItem("User");
+      //  localStorage.setItem("Date",'@ViewBag.Date');
+        /**/
+
+        if (user != '' && user != null) {
+            document.getElementById("result").innerHTML = "Welcome,&nbsp;" + localStorage.getItem("User") + " You logged in at " + localStorage.getItem("Date") ;
+            $("#signout").css("display", "block");
+            $("#signin").css("display", "none");
+        }
+        else {
+            $("#signout").css("display", "none");
+            $("#signin").css("display", "block");
+        }
+
+        function clear() {
+            localStorage.clear();
+        }
+
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#accordion').prop("disabled", true);
+        });
+        $(".menu li a").click(function () {
+            $('#accordion').on('shown.bs.collapse', '.panel-default', function (e) {
+                $('html,body').animate({
+                    scrollTop: $(this).offset().top
+                }, 800);
+            });
+        });
+    </script>
+
+    <script>
+        //$(".panel-heading").click(function () {
+        //    $('#accordion').on('shown.bs.collapse', '.panel-default', function (e) {
+        //        $('html,body').stop();
+        //    });
+        //});
+
+
+    </script>
+
+
+
+
+    <script>
+        if (localStorage.getItem("Role") != "Admin") {
+
+        }
+        else {
+
+        }
+
+        $("#accordion").click(function () {
+            $("#accordion").accordion("option", "active", 0); //maybe this line could be optional
+            return false;
+        });
+        function toggleIcon(e) {
+            if (localStorage.getItem("User") != null) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".more-less")
+                    .toggleClass('fa fa-plus-circle fa fa-minus-circle');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+        }
+    </script>
+    @*<script src="~/js/abc.js"></script>*@
+
+</body>
+</html>

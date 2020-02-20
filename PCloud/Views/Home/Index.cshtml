@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+
+
+                <div class="col-lg-4 col-sm-7">
+                    <div class="updates-box mr-auto">
+                        <div class="updated-innerbox">PACT.CLOUD UPDATES</div>
+                        <ul class="pact-updates-txt">
+                            <li>Partner involvement discussion completed</li>
+                            <li><a href="#">Pact.Cloud Framework is updated</a></li>
+                            <li><a href="#">Security deck updated</a></li>
+                            <li><a href="#">Cloud Migration deck updated</a></li>
+                            <li><a href="#">Managed services deck is in progress</a></li>
+                            <li><a href="#">Coming Soon : Pact.Cloud Playbook</a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 ">
+                    <h2 class="welcome-txt">Welcome to Pactera Cloud</h2>
+                    <p>
+                        <strong>Pact.Cloud</strong> platform will provide the best industry based service on Migration, Hosting & adoption, Architecture design, implementation, management, operation, control & Operation and response of the cloud. Let Pact.Cloud help on modernize your IT and drive innovation by harnessing all the benefits of the public cloud.
+                    </p>
+
+                    <ul class=" accordian-text">
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i><strong>Planning</strong> : Start by evaluating customer infrastructure</li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i><strong>Migration</strong> : Identify the data & Apps to migrate to the cloud</li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i><strong>Optimizing</strong> :Optimizing Performance, agility and efficiency </li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i><strong>Securing</strong>: Mitigate DDOS attack, Protect data & apps from breaches or attack</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background:#F9F9F9;">
+        <div class="container no-padding">
+            <div class="row" style="margin-right: 0; margin-left: 0;">
+                <div class="col-lg-4">
+                    <div class="image-box">
+                        <div class="row">
+                            <div class="heading-txt">Our OEM Partners</div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/our-oem-image-1.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/our-oem-image-2.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/our-oem-image-3.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/our-oem-image-4.jpg" class="img-fluid"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="image-box">
+                        <div class="row">
+                            <div class="heading-txt">Our Technical partners</div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/technical-image-1.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/technical-image-2.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/technical-image-3.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/technical-image-4.jpg" class="img-fluid"></div></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="image-box">
+                        <div class="row">
+                            <div class="heading-txt">Our clients</div>
+                            <div class="col-lg-6 col-6 col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/clients-image-1.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6  col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/clients-image-2.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6  col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/clients-image-3.jpg" class="img-fluid"></div></div>
+                            <div class="col-lg-6 col-6  col-sm-4 no-padding"><div class="image-box-innerbox d-flex justify-content-center"><img src="~/images/clients-image-4.jpg" class="img-fluid"></div></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    
+
+    
+
+
+    <a id="back-to-top" href="#" class="scroll-btn back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="~/js/abc.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+    <script>
+        localStorage.clear();
+        //$(".panel-heading").click(function () {
+        //    $(".panel-collapse").hide();
+        //});
+    </script>
+
+
+
